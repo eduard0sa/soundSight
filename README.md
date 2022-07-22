@@ -9,3 +9,5 @@ This repo is licensed under Apache License. For more information, read the LICEN
 ### About this Repo: ###
 
 This is the repository with the complete source code of the soundSight website progect.
+
+All the source code is in the <i>SoundSight</i> folder.
