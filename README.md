@@ -1,7 +1,11 @@
-# soundSight
+# SoundSight
+
+### License: ###
 
 Copyright © SoundSight 2022. All rights reserved.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+This repo is licensed under Apache License. For more information, read the LICENSE file witch is located in the main directory of this repo.
+
+### About this Repo: ###
 
 This is the repository with the complete source code of the soundSight website progect.
