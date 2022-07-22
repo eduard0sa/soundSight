@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home | SoundSight</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Oxygen:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="ASSETS/Sound Sight.png">
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0%;
+      position: absolute;
+      background-color: #0D0D0E;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="homepage-topnav">
+      <a href="https://soundsight.eduardoxavierxa.repl.co/"><img src="ASSETS/Sound Sight.png" height="55px"
+          id="homepage-logo"></a>
+      <a id="open-player" href="player.html">Listen to music</a>
+    </nav>
+  </header>
+  <section id="Header">
+    <img src="ASSETS/rupam-dutta-5OMff2RDqPs-unsplash.jpg" id="homepage-img">
+    <div class="header-text-block">
+      <h1>Feel the freedom of listening music!</h1>
+      <p>Find out your favorite tunes in our vast amount of musics.</p>
+    </div>
+  </section>
+  <button class="funny-widgets-btn"
+    onclick="window.location.href = 'https://soundsight.eduardoxavierxa.repl.co/index.html#funny-widgets'">
+    <i class="fa-solid fa-angles-left fa-lg"></i>
+    <span>Funny Widgets</span>
+  </button>
+  <section class="sec-content">
+    <section id="main-content">
+      <div class="fundo-azul-transparencia">
+        <h1>Advatages of listening music in SoundSight.</h1>
+        <ol>
+          <li>I'ts completly free! You don't have to pay any fee to use it!</li>
+          <li>Listen without adds and interruptions!</li>
+          <li>Listen safely! No compromising there.</li>
+        </ol>
+      </div>
+    </section>
+    <aside id="news-aside">
+      <div id="news-scrolable-content">
+        <h1 style="line-height: 0.3em;">News</h1>
+        <form id="search">
+          <input id="search-news-input" type="text" name="input" placeholder="Search by post title">
+          <button id="search-news-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <br>
+        <br>
+        <article class="announcement">
+          <h2 class="new-title">Presenting the new <i>What are your favorite songs?</i></h2>
+          <p>There's now a new topic on the page were you can tell us your favorite musics. Take a look to this awesome feature <a
+              href="https://soundsight.eduardoxavierxa.repl.co/index.html#best-musics" id="go-to-player">here</a>.</p>
+          <hr>
+          <small>Posted at 20/7/2022.</small>
+        </article>
+        <br>
+        <article class="announcement">
+          <h2 class="new-title">Presenting new Funny Widgets</h2>
+          <p>We've just released a new feature called Funny Widgets. Take a look to this awesome feature <a
+              href="https://soundsight.eduardoxavierxa.repl.co/index.html#funny-widgets" id="go-to-player">here</a>.</p>
+          <hr>
+          <small>Posted at 13/7/2022.</small>
+        </article>
+        <br>
+        <article class="announcement">
+          <h2 class="new-title">First musics release</h2>
+          <p>We've just released our first musics there. Check out the musics <a href="player.html"
+              id="go-to-player">here</a>.</p>
+          <hr>
+          <small>Posted at 1/7/2022.</small>
+        </article>
+      </div>
+      <div id="scroll_grad"><span class="fa-solid fa-chevron-down fa-xl"></span></div>
+    </aside>
+  </section>
+  <section class="funny_widgets" id="funny-widgets">
+    <div class="funny_widgets_header">
+      <h1>Try out our new funny widgets</h1>
+      <p id="subtitles">Enjoy our new section on this website, with some fantastic features like changing the background
+        color.</p>
+    </div>
+    <div class="funny_widgets_panel">
+      <div class="change_bkgcolor" id="change_bkgcolor">
+        <div id="change-bkcolor-header">
+          <h1>Background Color</h1>
+        </div>
+        <div id="change-bkcolor-content">
+          <div id="buttons">
+            <button class="change_bkgcolor_btn" id="red">Red</button>
+            <button class="change_bkgcolor_btn" id="green">Green</button>
+            <button class="change_bkgcolor_btn" id="blue">Blue</button>
+            <button class="change_bkgcolor_btn" id="yellow">Yellow</button>
+            <button class="change_bkgcolor_btn" id="black">Black</button>
+            <button class="change_bkgcolor_btn" id="white">White</button>
+          </div>
+          <div id="image-hover">
+            <img class="img-to-hover" src="ASSETS/pawel-czerwinski-eybM9n4yrpE-unsplash.jpg" alt="img1">
+            <img class="img-to-hover" src="ASSETS/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" alt="img2">
+          </div>
+        </div>
+      </div>
+      <div class="calc-mouse-position">
+        <h1>Cursor position calculator</h1>
+        <p id="subtitles">Know your mouse cursor position on the page with our new feature.</p>
+        <div class="calc-mouse-position-content">
+          <button id="show-cordinates">Get Cursor Cordinates</button>
+          <div class="counters">
+            <div id="x-position">
+              <div class="label">
+                <p>X - Position</p>
+              </div>
+              <span id="xCordinates"></span>
+            </div>
+            <div id="y-position">
+              <div class="label">
+                <p>Y - Position</p>
+              </div>
+              <span id="yCordinates"></span>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+  </section>
+
+  <section id="best-musics">
+      <h1>What are your favorite songs?</h1>
+      <p id="subtitles">Tell us what are your 5 favorite songs.</p>
+      <br>
+    <div id="fav-songs">
+      <h2>Top 5 favorite songs:</h2>
+      <form id="fav-song-form" action="#">
+        <input type="text" id="insert-fav-song" placeholder="Type the name of a song" spellcheck="false">
+        <input type="submit" id="submit-fav-song">
+      </form>
+
+      <div id="fav-songs-list">
+        <p id="void-music-list">Fill the void of this list with your favorite songs!</p>
+        <ul id="fav-songs-list-ul"></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <p>Copyright &copy SoundSight 2022. All rights reserved.</p>
+    <br>
+    <a href="player.html" id="go-to-player">Go to player</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

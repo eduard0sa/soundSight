@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SoundSight Music</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Oxygen:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="ASSETS/Sound Sight.png">
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      position: absolute;
+      background-color: #00FF8B;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="flex-container">
+    <aside class="sidebar">
+      <h1 id="site-name">SoundSight</h1>
+      <ul class="sidebar_list" ;>
+        <li class="sidebar_items"><a href="player.html">Home</a></li>
+        <li class="sidebar_items"><a href="#">Genres</a></li>
+      </ul>
+      <a id="go-to-HomePage" href="index.html">Copyright &copy SoundSight 2022. All rights reserved.</a>
+    </aside>
+    <section id="side-b">
+      <div class="player-topnav">
+        <img src="ASSETS/Sound Sight.png" class="imagens-pequenas">
+      </div>
+      <div class="content">
+        <h1 style="font-family: 'Bungee', cursive; color: black;">Home</h1>
+        <p>In <strong>SoundSight</strong>, you can find musics of various genres and artists.</p>
+        <h2 style="font-family: 'Bungee', cursive; color: black;">Latest releases</h2>
+        <div class="musics-row">
+          <div class="music" id="music" onmouseover="musicOver('#overlay1')" onmouseout="musicOut('#overlay1')">
+            <img src="ASSETS/dolo-iglesias-FjElUqGfbAw-unsplash.jpg" alt="jazz">
+            <div class="music-details">
+              <h2>The Jazz Piano</h2>
+              <small>by Benjamin Tissot</small>
+            </div>
+            <div class="overlay" id="overlay1">
+              <button class="play-btn" id="music_16_play" onclick="playMusic('music_16', musicList)"><i
+                  class="fa-solid fa-circle-play fa-3x play-music"></i></button>
+              <button class="pause-btn" id="music_16_pause" onclick="pauseMusic('music_16')"><i
+                  class="fa-solid fa-circle-pause fa-3x play-music"></i></button>
+            </div>
+          </div>
+          
+          <div class="music" id="music" onmouseover="musicOver('#overlay2')" onmouseout="musicOut('#overlay2')">
+            <img src="ASSETS/pearse-o-halloran-mrbDuwF9gqk-unsplash.jpg" alt="jazz">
+            <div class="music-details">
+              <h2>The Elevator Bossa Nova</h2>
+              <small>by Benjamin Tissot</small>
+            </div>
+            <div class="overlay" id="overlay2">
+              <button class="play-btn" id="music_15_play" onclick="playMusic('music_15', musicList)"><i
+                  class="fa-solid fa-circle-play fa-3x play-music"></i></button>
+              <button class="pause-btn" id="music_15_pause" onclick="pauseMusic('music_15')"><i
+                  class="fa-solid fa-circle-pause fa-3x play-music"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="player-bar">
+        <div id="controls">
+          <button id="backward" onclick="prevMusic(musicList)"><i class="fa-solid fa-backward-step fa-2x"></i></button>
+
+          <button class="play-btn-disabled" id="play-btn-disabled" disabled><i
+              class="fa-solid fa-circle-play fa-3x play-music"></i></button>
+
+          <button class="play-btn" id="play-btn-enabled" onclick="playMusic('none', musicList)"><i
+              class="fa-solid fa-circle-play fa-3x play-music"></i></button>
+
+          <button class="pause-btn" id="pause-btn" onclick="pauseMusic('none')""><i class=" fa-solid fa-circle-pause
+            fa-3x play-music"></i></button>
+
+          <button id="forward" onclick="nextMusic(musicList)"><i class="fa-solid fa-forward-step fa-2x"></i></button>
+        </div>
+        <br>
+        <div id="progress-bar">
+          <input type="range" id="progress" value="0">
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    const musicList = {
+      music_1: 'ASSETS/Musics/Acoustic/adaytoremember.mp3',
+      music_2: 'ASSETS/Musics/Acoustic/love.mp3',
+      music_3: 'ASSETS/Musics/Acoustic/november.mp3',
+      music_4: 'ASSETS/Musics/Acoustic/pianomoment.mp3',
+      music_5: 'ASSETS/Musics/Acoustic/sadday.mp3',
+
+      music_6: 'ASSETS/Musics/Electronic/dubstep.mp3',
+      music_7: 'ASSETS/Musics/Electronic/house.mp3',
+      music_8: 'ASSETS/Musics/Electronic/moose.mp3',
+      music_9: 'ASSETS/Musics/Electronic/scifi.mp3',
+      music_10: 'ASSETS/Musics/Electronic/summer.mp3',
+
+      music_11: 'ASSETS/Musics/Jazz/hipjazz.mp3',
+      music_12: 'ASSETS/Musics/Jazz/jazzcomedy.mp3',
+      music_13: 'ASSETS/Musics/Jazz/jazzyfrenchy.mp3',
+      music_14: 'ASSETS/Musics/Jazz/romantic.mp3',
+      music_15: 'ASSETS/Musics/Jazz/theelevatorbossanova.mp3',
+      music_16: 'ASSETS/Musics/Jazz/thejazzpiano.mp3',
+
+      music_17: 'ASSETS/Musics/Pop/erf.mp3',
+      music_18: 'ASSETS/Musics/Pop/happiness.mp3',
+      music_19: 'ASSETS/Musics/Pop/sweet.mp3',
+
+      music_20: 'ASSETS/Musics/R&B/groovyhiphop.mp3',
+
+      music_21: 'ASSETS/Musics/Rock/anewbeginning.mp3',
+      music_22: 'ASSETS/Musics/Rock/beyondtheline.mp3',
+      music_23: 'ASSETS/Musics/Rock/happyrock.mp3',
+      music_24: 'ASSETS/Musics/Rock/highoctane.mp3',
+      music_25: 'ASSETS/Musics/Rock/punky.mp3',
+      music_26: 'ASSETS/Musics/Rock/rumble.mp3',
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
